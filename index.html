@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Preprocessing App</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Preprocessing Tool</h1>
+        
+        <div class="upload-section">
+            <div class="file-drop-zone" id="dropZone">
+                <p>Drag and drop your CSV/Excel file here or</p>
+                <input type="file" id="fileInput" accept=".csv,.xlsx,.xls">
+                <button onclick="document.getElementById('fileInput').click()">Choose File</button>
+            </div>
+        </div>
+
+        <div class="workflow-section">
+            <div class="tools-panel">
+                <h3>Available Tools</h3>
+                <div class="tool-item" draggable="true" data-tool="check_null">
+                    Check Null Values
+                </div>
+                <div class="tool-item" draggable="true" data-tool="remove_null">
+                    Remove Null Values
+                </div>
+                <div class="tool-item" draggable="true" data-tool="get_summary">
+                    Get Data Summary
+                </div>
+            </div>
+
+            <div class="workflow-panel">
+                <h3>Workflow</h3>
+                <div class="workflow-container" id="workflowContainer">
+                    <!-- Workflow items will be added here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <h3>Results</h3>
+            <div id="resultsContainer">
+                <!-- Results will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html> 
